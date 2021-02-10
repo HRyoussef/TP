@@ -75,40 +75,61 @@ padding-top:50px;
 
 
 }
+
+
     </style>
 
     <script>
-      
+      let villeCourante = "Rabat";
       function showCity() {
-        console.log(villeCourante);
+        //console.log(villeCourante);
+
+// 1. Récupérer la valeur courante du menu 
+  // Pour ça on va faire :
+  var ville = document.getElementById("selectedVille").value;
+
+  let cities = document.getElementsByClassName("city");
+
+  for (i=0; i<cities.length; i++) {
+    if (cities[i].id == ville) {
+
+       cities[i].style.display= "";
+    } else {
+
+       cities[i].style.display= "none";
+
+    }
+  }
+
+
+
       }
-let villeCourante = "Lyon";
+
     </script>
   </head>
 
   <body>
     <h1 class="titre">TP Météo HTML</h1>
+      <label for="ville-select">Choose city:</label>
 
-   <label for="ville-select">Choose city:</label>
-     <select onchange="showCity()" name="villes" id="villes-select">
-      <option value="Rabat">Rabat</option>
-      <option value="Guercif">Guercif</option>
-      <option value="Berkane">Berkane</option>
+    <select onchange="showCity()" name="villes" id="selectedVille">
+      <option  value="Rabat">Rabat</option>
+      <option  value="Guercif">Guercif</option>
+      <option  value="Berkane">Berkane</option>
     </select>
-    
     <div class="flex-container">
-      <div class="flex-item" id="Rabat">
+      <div class="flex-item city" id="Rabat">
         <h3>Rabat</h3>
         <p>8 C°, heure : 22:17 H</p>
         <img
-          src="file:///C:/Users/dell/Downloads/noun_snow%20cloud_737641.svg"
-          alt="Ville Rabat"
+          src="https://www.kasandbox.org/programming-images/seasonal/snowy-slope-with-trees.png"
+          alt="Vi lle Rabat"
           width="90"
           height="40"
         />
       </div>
 
-      <div class="flex-item" id="Guercif">
+      <div class="flex-item city" id="Guercif">
         <h3>Guercif</h3>
         <p>6 C°, heure : 22:17 H</p>
         <img align="center" 
@@ -118,7 +139,7 @@ let villeCourante = "Lyon";
           height="40"
         />
       </div>
-      <div class="flex-item" id="Berkane">
+      <div class="flex-item city" id="Berkane">
         <h3>Berkane</h3>
         <p>4 C°, heure : 22:17 H</p>
         <img
