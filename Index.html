@@ -86,10 +86,16 @@ let villeCourante = "Lyon";
     </script>
   </head>
 
-  <body onload="showCity()">
+  <body>
     <h1 class="titre">TP Météo HTML</h1>
 
-
+   <label for="ville-select">Choose city:</label>
+     <select onchange="showCity()" name="villes" id="villes-select">
+      <option value="Rabat">Rabat</option>
+      <option value="Guercif">Guercif</option>
+      <option value="Berkane">Berkane</option>
+    </select>
+    
     <div class="flex-container">
       <div class="flex-item" id="Rabat">
         <h3>Rabat</h3>
