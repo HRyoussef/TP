@@ -5,107 +5,12 @@
     <meta charset="UTF-8" />
     <title>TP metéo HTML</title>
 
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "main.css" />
+
+<script src="meteo.js"></script>
   
-
-    <style>
-      .titre {
-        background-color: rgb(43, 31, 31);
-        color: honeydew;
-        text-align: center;
-        
-        position: top;
-        margin-top: 0;
-      }
-      .couleurBack {
-        background-color: rgba(124, 108, 108, 0.671);
-      }
-    
-
-  .flex-container {
-  padding: 0;
-  margin: 0;
-  flex-direction: row;
-  list-style: none;
-  display: flex;
-   flex-wrap: wrap;
-   flex-basis: auto;
-}
-
-
-.flex-item {
-  background: gray;
-  padding: 5px;
-
-  margin: 10px;
-  
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
- // text-align: center;
-
- flex-grow: 1;
-}
-
-     .flex {
-        display: flex;
-       flex-direction: row;
-        flex-wrap: wrap;
-      justify-content: space-between;
-   }
-
-      .couleurBack {
-        width: 450px;
-        margin: auto;
-        padding-left: 15px;
-      }
-
-
-      .footer{
-
-background:#ccc;
-
-position:bottom: ;
-
-bottom:0;
-
-width:100%;
-
-padding-top:50px;
-
-
-}
-
-
-    </style>
-
-    <script>
-      let villeCourante = "Rabat";
-      function showCity() {
-        //console.log(villeCourante);
-
-// 1. Récupérer la valeur courante du menu 
-  // Pour ça on va faire :
-  var ville = document.getElementById("selectedVille").value;
-
-  let cities = document.getElementsByClassName("city");
-
-  for (i=0; i<cities.length; i++) {
-    if (cities[i].id == ville) {
-
-       cities[i].style.display= "";
-    } else {
-
-       cities[i].style.display= "none";
-
-    }
-  }
-
-
-
-      }
-
-    </script>
   </head>
 
   <body>
