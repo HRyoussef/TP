@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TP metéo HTML</title>
+
+  
+
+    <style>
+      .titre {
+        background-color: rgb(43, 31, 31);
+        color: honeydew;
+        text-align: center;
+        
+        position: top;
+        margin-top: 0;
+      }
+      .couleurBack {
+        background-color: rgba(124, 108, 108, 0.671);
+      }
+    
+
+  .flex-container {
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  list-style: none;
+  display: flex;
+   flex-wrap: wrap;
+   flex-basis: auto;
+}
+
+
+.flex-item {
+  background: gray;
+  padding: 5px;
+
+  margin: 10px;
+  
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+ // text-align: center;
+
+ flex-grow: 1;
+}
+
+     .flex {
+        display: flex;
+       flex-direction: row;
+        flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+      .couleurBack {
+        width: 450px;
+        margin: auto;
+        padding-left: 15px;
+      }
+
+
+      .footer{
+
+background:#ccc;
+
+position:bottom: ;
+
+bottom:0;
+
+width:100%;
+
+padding-top:50px;
+
+
+}
+    </style>
+
+    <script>
+      
+      function showCity() {
+       alert (villeCourante);
+      }
+let villeCourante = "Lyon";
+    </script>
+  </head>
+
+  <body onload="showCity()">
+    <h1 class="titre">TP Météo HTML</h1>
+
+
+    <div class="flex-container">
+      <div class="flex-item" id="Rabat">
+        <h3>Rabat</h3>
+        <p>8 C°, heure : 22:17 H</p>
+        <img
+          src="file:///C:/Users/dell/Downloads/noun_snow%20cloud_737641.svg"
+          alt="Ville Rabat"
+          width="90"
+          height="40"
+        />
+      </div>
+
+      <div class="flex-item" id="Guercif">
+        <h3>Guercif</h3>
+        <p>6 C°, heure : 22:17 H</p>
+        <img align="center" 
+          src="file:///C:/Users/dell/Downloads/noun_snow%20cloud_737641%20(1).svg"
+          alt="Ville Guercif"
+          width="90"
+          height="40"
+        />
+      </div>
+      <div class="flex-item" id="Berkane">
+        <h3>Berkane</h3>
+        <p>4 C°, heure : 22:17 H</p>
+        <img
+          src="file:///C:/Users/dell/Downloads/noun_snow%20cloud_737641.svg"
+          alt="Ville Berkane"
+          width="90"
+          height="40"
+        />
+      </div>
+    </div>
+    <div class="footer">
+     
+        youssef HIRCHAOU<br />
+        yassine BELHADJ<br />
+     
+    </div>
+  </body>
+</html>
